@@ -32,7 +32,6 @@ namespace Assignment2
         {
 
         }
-        Form Form2 = new Form2();
         private void bmi_b_Click(object sender, EventArgs e)
         {
             if (fname_tb.Text == "" || lname_tb.Text == "" || m_tb.Text == "" || d_tb.Text == "" || y_tb.Text == "" || g_tb.Text == "" || h_tb.Text == "" || w_tb.Text == "")
@@ -56,6 +55,8 @@ namespace Assignment2
                 user1.gender = g_tb.Text;
                 user1.weight = w;
                 user1.height = h;
+                user1.bmi = Math.Round(calcBmi(h, w));
+                Form Form2 = new Form2(user1);
                 Form2.Show();
             }
         }
@@ -63,6 +64,17 @@ namespace Assignment2
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private double calcBmi(int h, int w)
+        {
+            return ((w / Math.Pow(h, 2)) * 703);
+        }
+
+        private void bmichart_b_Click(object sender, EventArgs e)
+        {
+            Form Form3 = new Form3();
+            Form3.Show();
         }
     }
 }

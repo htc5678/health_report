@@ -162,18 +162,18 @@ namespace Assignment2
             this.weight.AutoSize = true;
             this.weight.Location = new System.Drawing.Point(76, 307);
             this.weight.Name = "weight";
-            this.weight.Size = new System.Drawing.Size(41, 13);
+            this.weight.Size = new System.Drawing.Size(58, 13);
             this.weight.TabIndex = 16;
-            this.weight.Text = "Weight";
+            this.weight.Text = "Weight (lb)";
             // 
             // height
             // 
             this.height.AutoSize = true;
             this.height.Location = new System.Drawing.Point(76, 283);
             this.height.Name = "height";
-            this.height.Size = new System.Drawing.Size(38, 13);
+            this.height.Size = new System.Drawing.Size(78, 13);
             this.height.TabIndex = 15;
-            this.height.Text = "Height";
+            this.height.Text = "Height (inches)";
             this.height.Click += new System.EventHandler(this.label6_Click);
             // 
             // year
@@ -212,6 +212,7 @@ namespace Assignment2
             this.bmichart_b.TabIndex = 18;
             this.bmichart_b.Text = "Show me the BMI chart!";
             this.bmichart_b.UseVisualStyleBackColor = true;
+            this.bmichart_b.Click += new System.EventHandler(this.bmichart_b_Click);
             // 
             // pictureBox1
             // 
@@ -251,7 +252,7 @@ namespace Assignment2
             this.Controls.Add(this.fname_tb);
             this.Controls.Add(this.labelMain);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Setup Profile";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

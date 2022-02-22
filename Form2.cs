@@ -13,9 +13,19 @@ namespace health_report
 {
     public partial class Form2 : Form
     {
-        public Form2()
+        public Form2(user user1)
         {
             InitializeComponent();
+            wtb.Text = user1.weight.ToString();
+            htb.Text = user1.height.ToString();
+            gtb.Text = user1.gender.ToString();
+            ftb.Text = user1.fname;
+            ltb.Text = user1.lname;
+            mtb.Text = user1.month.ToString();
+            dtb.Text = user1.day.ToString();
+            ytb.Text = user1.year.ToString();
+            bmi_l.Text = user1.bmi.ToString();
+
         }
         private void Form2_Load(object sender, EventArgs e)
         {
@@ -27,37 +37,14 @@ namespace health_report
 
         }
 
-        public void getWeight(int weight)
+        private void label1_Click(object sender, EventArgs e)
         {
-            wtb.Text = weight.ToString();
+
         }
-        public void getHeight(int height)
+
+        private void bmi_l_Click(object sender, EventArgs e)
         {
-            wtb.Text = height.ToString();
-        }
-        public void getDay(int day)
-        {
-            wtb.Text = day.ToString();
-        }
-        public void getMonth(int month)
-        {
-            wtb.Text = month.ToString();
-        }
-        public void getYear(int year)
-        {
-            wtb.Text = year.ToString();
-        }
-        public void getGender(string gender)
-        {
-            wtb.Text = gender;
-        }
-        public void getFirst(string first)
-        {
-            wtb.Text = first;
-        }
-        public void getLast(string last)
-        {
-            wtb.Text = last;
+
         }
     }
 }
